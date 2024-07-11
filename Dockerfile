@@ -10,4 +10,7 @@ RUN pip3 install -r requirements.txt
 
 COPY . .
 
+# Expose the port the application will run on (fixing the missing port issue)
+EXPOSE 5000
+
 CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
